@@ -1,5 +1,7 @@
 ﻿namespace DifferentObjectsInList
 {
+    using System.Text.Json;
+
     internal class Program
     {
         static void Main(string[] args)
@@ -7,7 +9,7 @@
             var hanger = new HangerSequence
             {
                 HangerId = "HG123",
-                ProcessSequences = new List<ProcessSequence>
+                ProcessSequences = new List<object>
                 {
                     new PickAndProcess
                     {
@@ -40,6 +42,8 @@
                         break;
                 }
             }
+
+            var jsonString = JsonSerializer.Serialize(hanger);
         }
     }
 }

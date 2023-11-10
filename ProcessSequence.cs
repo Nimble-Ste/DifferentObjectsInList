@@ -5,7 +5,7 @@
     {
         public string HangerId { get; set; }
 
-        public List<ProcessSequence> ProcessSequences { get; set; }
+        public List<object> ProcessSequences { get; set; }
 
     }
 
